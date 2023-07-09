@@ -1,0 +1,168 @@
+.parent{
+    background: rgb(8, 65, 221);
+    padding: 10px;
+    color: aliceblue;
+    display: grid;
+    height: 500px;
+    /* width: 250px; */
+    /* التحكم في عدد الاعمده وعرضهم ب البكسل */
+    /* grid-template-columns: 100px 200px 70px;  */
+
+    /* all = 100% */ /* التحكم في عدد الاعمده وعرضهم ب النسبه المئويه*/
+    /* grid-template-columns: 20% 50% 30% ;  */
+    /* grid-template-columns: auto auto; */
+
+    /* تقيسم عرض الكونتينر باتساوي علي الابناء  */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: 3fr 1fr 1fr 1fr; */
+    /* grid-template-columns: auto 1fr; */
+    
+    /* تكرار عرض العمود علي حسب انت محجتاج كام عمود */
+    /* ولكن لو ختارت عدد اعمده والمساحه لو  اكبر من الموجود العنصر هيخرج بره الاب  */
+    /* grid-template-columns: repeat(3,200px); */
+    /* grid-template-columns: repeat(3 , 1fr); */
+    
+    /* grid-template-columns: minmax(100px , 200px); */
+    
+    /* دي افضل حاجه لتقسيم العرض  */
+    /* grid-template-columns: repeat(auto-fill ,minmax(100%,1fr)); */
+    grid-template-columns: repeat(auto-fill ,minmax(100px,1fr));
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px;
+    /* text-align: center; */
+    
+    /* grid-template-rows: repeat(3 , 1fr) ; */
+
+
+}
+
+.parent div{
+    background: black;
+    padding: 10px;
+}
+.parent .item1{
+    /* grid-column: 1/3; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+.parent1{
+    margin-top: 50px;
+    background: rgb(8, 65, 221);
+    padding: 10px;
+    color: black;
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    text-align: center;
+    gap: 10px;
+    
+}
+.parent1 .item1{
+    background-color: aqua;
+    grid-column: 1/4;
+}
+
+.parent1 .item2{
+    background-color: rgb(255, 0, 170);
+    grid-row: 2/4;
+}
+
+.parent1 .item3{
+    background-color: rgb(0, 162, 255);
+    grid-row: 2/4;
+}
+.parent1 .item4{
+    background-color: rgb(89, 5, 145);
+    grid-row: 2/4;
+}
+.parent1 .item5{
+    background-color: aquamarine;
+    grid-column: 1/4;
+}
+.parent1 .item1,.parent1 .item2,.parent1 .item3,
+.parent1 .item4,.parent1 .item5{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.parent2{
+    margin-top: 50px;
+    background: rgb(8, 65, 221);
+    padding: 10px;
+    color: black;
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(12,1fr);
+    text-align: center;
+    gap: 10px;
+    
+}
+.parent2 #header1{
+    background-color: rgb(119, 15, 15);
+    grid-column: 1/4;
+    /* grid-row: 1/2; */
+    grid-row: 1/3;
+}
+.parent2 .nav{
+    background-color: aquamarine;
+    grid-column: 1/4;
+    /* grid-row: 2/2; */
+    grid-row: 3/4;
+}
+.parent2 .atricle{
+    background-color: blanchedalmond;
+    grid-column: 1/3;
+    grid-row: 4/12;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(12,1fr);
+    gap: 10px;
+    
+}
+.parent2 .atricle .header{
+    background-color: rgb(163, 109, 27);
+    padding: 6px;
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+
+.parent2 .atricle .section1{
+    background-color: rgb(27, 163, 68);
+    padding: 6px;
+    grid-column: 1/4;
+    grid-row: 8/10;
+}
+.parent2 .atricle .section2{
+    background-color: rgb(27, 163, 68);
+    padding: 6px;
+    grid-column: 1/4;
+    grid-row: 10/12;
+}
+.parent2 .atricle .footer{
+    background-color: rgb(27, 163, 68);
+    padding: 6px;
+    grid-column: 1/4;
+    grid-row: 12/13;
+}
+.parent2 .div{
+    background-color: rgb(167, 33, 33);
+    grid-column: 3/4;
+    grid-row: 4/12;
+    gap: 10px;
+    grid-template-rows: repeat(2,1fr);
+    display: grid;
+}
+.parent2 .div .aside{
+    color: antiquewhite;
+    background-color: rgb(45, 15, 126);
+}
+.parent2 .footer{
+    background-color: rgb(126, 15, 24);
+    grid-column: 1/4;
+}
